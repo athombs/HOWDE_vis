@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>HOWD-E Visualizations</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-title">HOWD-E</div>
+
+<div class="nav-links">
+
+<button onclick="openPage('welcome')" class="nav-button active">Home</button>
+<button onclick="openPage('visualizations')" class="nav-button">Projects</button>
+<button onclick="openPage('about')" class="nav-button">About</button>
+
+</div>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section id="welcome" class="page active">
+
+<h1>Howdy!</h1>
+
+<p class="subtitle">
+Welcome to my page!
+</p>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="visualizations" class="page">
+
+<h2>Simulation Projects</h2>
+
+<div class="project-grid">
+
+  <div class="project-card" onclick="loadSimulation('cyl')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/cyl_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Mach 3 Cylinder in Channel (2D)</h3>
+      <p>Unsteady separation with shock-vortex interaction.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('ffstep')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/ffstep_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Mach 3 Forward Facing Step (2D)</h3>
+      <p>Bow shock forming a mach stem and shear layer.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('foil3d')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/foil3d_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>OAT15a Supercritical Airfoil (3D)</h3>
+      <p>Transonic flow with buffet and flow separation.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('foil')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/foil_mach.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>OAT15a Supercritical Airfoil (2D)</h3>
+      <p>Transonic flow with buffet and flow separation.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('riemannC3')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/riemannC3_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Riemann - Configuration 3 (2D)</h3>
+      <p>Riemann configuration 3: 4 shocks.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('riemannC6')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/riemannC6_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Riemann - Configuration 6 (2D)</h3>
+      <p>Riemann configuration 6: 4 contacts.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('kh2d')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/kh2d_density.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Kelvin–Helmholtz Instability (2D)</h3>
+      <p>Multispecies mixing layer instability.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('kh3d')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/kh3d_density.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Kelvin–Helmholtz Instability (3D)</h3>
+      <p>Multispecies three-dimensional turbulence.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('lowbubble')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/lowbubble_mach.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Low-Density Bubble Impact (2D)</h3>
+      <p>Shock-bubble interaction that accelerates shock.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('highbubble')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/highbubble_mach.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>High-Density Bubble Impact (2D)</h3>
+      <p>Shock-bubble interaction that decelerates the shock.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('rt')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/rt_density.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Rayleigh-Taylor Instability (2D)</h3>
+      <p>Density-driven flow inversion.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('triple')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/triple_logdensity.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Triple-Point Shock Interaction (2D)</h3>
+      <p>Differing shock speeds produce shear layer rollup.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('blast')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/blast_density.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Blast Wave Interaction (2D)</h3>
+      <p>Three interacting blast waves producing Richtmeyer-Meshkov instabilities.</p>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="loadSimulation('flarecone')">
+    <video class="card-video" muted loop autoplay playsinline>
+      <source src="videos/flarecone_heatflux.mp4" type="video/mp4">
+    </video>
+    <div class="card-overlay">
+      <h3>Transition to Turbulence on Flared Cone (3D)</h3>
+      <p>Free stream acoustic perturbations generate second-mode instabilities.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="viewer-layout">
+<div class="video-panel">
+<h2 id="simTitle">Simulation Viewer</h2>
+<label>Variable</label>
+<select id="variableSelect"></select>
+<video id="viewer" controls autoplay loop muted>
+<source src="videos/cyl_logdensity.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div class="doc-panel">
+<h3>Simulation Details</h3>
+<div id="simDocs"></div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ABOUT -->
+<section id="about" class="page">
+<h2>About</h2>
+
+<p>
+These simulations were generated using a custom CFD solver
+written in C++ with MPI parallelization.
+</p>
+
+<ul>
+<li>Finite Volume Methods</li>
+<li>Approximate Riemann solvers</li>
+<li>Hypersonic flow physics</li>
+<li>Thermochemical nonequilibrium</li>
+</ul>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
