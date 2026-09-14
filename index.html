@@ -20,7 +20,6 @@
 
 <button onclick="openPage('welcome')" class="nav-button active">Home</button>
 <button onclick="openPage('visualizations')" class="nav-button">Projects</button>
-<button onclick="openPage('about')" class="nav-button">About</button>
 
 </div>
 
@@ -128,26 +127,6 @@ Welcome to my page!
     </div>
   </div>
 
-  <div class="project-card" onclick="loadSimulation('lowbubble')">
-    <video class="card-video" muted loop autoplay playsinline>
-      <source src="videos/lowbubble_mach.mp4" type="video/mp4">
-    </video>
-    <div class="card-overlay">
-      <h3>Low-Density Bubble Impact (2D)</h3>
-      <p>Shock-bubble interaction that accelerates shock.</p>
-    </div>
-  </div>
-
-  <div class="project-card" onclick="loadSimulation('highbubble')">
-    <video class="card-video" muted loop autoplay playsinline>
-      <source src="videos/highbubble_mach.mp4" type="video/mp4">
-    </video>
-    <div class="card-overlay">
-      <h3>High-Density Bubble Impact (2D)</h3>
-      <p>Shock-bubble interaction that decelerates the shock.</p>
-    </div>
-  </div>
-
   <div class="project-card" onclick="loadSimulation('rt')">
     <video class="card-video" muted loop autoplay playsinline>
       <source src="videos/rt_density.mp4" type="video/mp4">
@@ -206,27 +185,6 @@ Welcome to my page!
 <div id="simDocs"></div>
 
 </div>
-
-</div>
-
-</section>
-<!-- ABOUT -->
-<section id="about" class="page">
-<h2>About</h2>
-
-<p>
-These simulations were generated using a custom CFD solver
-written in C++ with MPI parallelization.
-</p>
-
-<ul>
-<li>Finite Volume Methods</li>
-<li>Approximate Riemann solvers</li>
-<li>Hypersonic flow physics</li>
-<li>Thermochemical nonequilibrium</li>
-</ul>
-
-</section>
 
 <script src="script.js"></script>
 </body>
