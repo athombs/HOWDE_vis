@@ -48,7 +48,6 @@ foil:[
 {label:"Temperature",file:"temperature"},
 {label:"Schlieren",file:"schlieren"},
 {label:"Vorticity",file:"vorticity"},
-{label:"Density Logarithm",file:"logdensity"}
 ],
 
 riemannC3:[
@@ -147,7 +146,6 @@ blast:[
 flarecone:[
 {label:"Mach",file:"mach"},
 {label:"Pressure",file:"pressure"},
-{label:"Temperature",file:"temperature"},
 {label:"Schlieren",file:"schlieren"},
 {label:"Heat Flux",file:"heatflux"},
 ],
