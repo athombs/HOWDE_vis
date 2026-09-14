@@ -2,42 +2,51 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <title>HOWD-E Visualizations</title>
-
 <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-
 <nav>
-
 <div class="nav-title">HOWD-E</div>
-
 <div class="nav-links">
-
 <button onclick="openPage('welcome')" class="nav-button active">Home</button>
 <button onclick="openPage('visualizations')" class="nav-button">Projects</button>
-
 </div>
-
 </nav>
 
-
 <!-- HOME -->
-
 <section id="welcome" class="page active">
-
-<h1>Howdy!</h1>
-
-<p class="subtitle">
-Welcome to my page!
-</p>
-
+  <h1>Howdy!</h1>
+  <p class="subtitle">
+    Welcome — this site showcases HOWD‑E (High‑Order WENO Discretization – Explicit),
+    a hypersonic CFD research code I developed during my PhD at Texas A&amp;M.
+  </p>
+  <p>
+    The original goal was to enable high‑fidelity simulation of hypersonic flows over
+    ablating vehicles under thermochemical nonequilibrium. That required a tool with
+    capabilities that are difficult to find together in open-source CFD:
+  </p>
+  <ul>
+    <li>Very high‑order spatial discretization (6th+ for DNS‑class calculations)</li>
+    <li>Curvilinear multiblock structured grids (flight‑vehicle geometries)</li>
+    <li>Thermal and chemical nonequilibrium modeling</li>
+    <li>Massively parallel computation</li>
+    <li>Finite‑rate surface chemistry / surface ablation modeling</li>
+    <li>Algebraic, RANS, and LES turbulence modeling</li>
+  </ul>
+  <p>
+    This site is primarily a visualization portfolio and a quick overview of what the code can do.
+    For usage details, theory, and setup, see the user manual (or contact me).
+  </p>
+  <p><strong>Next:</strong> head to the <a href="#visualizations" onclick="showPage('visualizations')">Visualizations</a> tab to explore results.</p>
+  <hr>
+  <p style="font-size: 0.95em;">
+    <strong>Note:</strong> HOWD‑E is a beta research code and is provided “as is,” without warranty.
+    Bug reports and questions: <a href="mailto:austinthombs@tamu.edu">austinthombs@tamu.edu</a>.
+  </p>
 </section>
-
 
 <!-- PROJECTS -->
 
@@ -46,7 +55,6 @@ Welcome to my page!
 <h2>Simulation Projects</h2>
 
 <div class="project-grid">
-
   <div class="project-card" onclick="loadSimulation('cyl')">
     <video class="card-video" muted loop autoplay playsinline>
       <source src="videos/cyl_logdensity.mp4" type="video/mp4">
